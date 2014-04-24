@@ -1,14 +1,15 @@
 C2TAM: A Cloud framework for cooperative tracking and mapping
 ===================================
 
-Luis Riazuelo
-<riazuelo@unizar.es>
+Luis Riazuelo <riazuelo@unizar.es>\\
+Javier Civera\\
+Jose Maria Martinez Montiel\\
 
-Robotics, Perception and Real-Time Group
-Aragón Institute of Engineering Research (I3A)
-University of Zaragoza, Spain
-<http://robots.unizar.es>
-<https://i3a.unizar.es/‎>
+Robotics, Perception and Real-Time Group\\
+Aragón Institute of Engineering Research (I3A)\\
+University of Zaragoza, Spain\\
+<http://robots.unizar.es>\\
+<https://i3a.unizar.es/‎>\\
 
 Overview
 -----------------------------------
