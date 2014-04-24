@@ -1,7 +1,7 @@
 C2TAM: A Cloud framework for cooperative tracking and mapping
 ===================================
 
-- Luis Riazuelo <riazuelo@unizar.es>  
+- Luis Riazuelo (riazuelo at unizar dot es)  
 - Javier Civera  
 - Jose Maria Martinez Montiel
 
@@ -78,9 +78,9 @@ References
 
 If you use this software in your reasearch, please cite the following journal paper:
 
-L. RiazueloCorresponding, Javier Civera, J.M.M. Montiel
-*C2TAM: A Cloud framework for cooperative tracking and mapping*.
-Robotics and Autonomous Systems, Volume 62, Issue 4, Pages 401–413, April 2014
+L. Riazuelo, Javier Civera, J.M.M. Montiel  
+*C2TAM: A Cloud framework for cooperative tracking and mapping*.  
+Robotics and Autonomous Systems, Volume 62, Issue 4, Pages 401–413, April 2014  
 
 More info
 -----------------------------------
