@@ -1,0 +1,20 @@
+<package>
+  <description brief="c2tam_srvs">
+
+     c2tam_srvs
+
+  </description>
+  <author>luis</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/c2tam_srvs</url>
+
+   <depend package="c2tam_msgs"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/srv/cpp"/>
+  </export>
+
+</package>
+
+

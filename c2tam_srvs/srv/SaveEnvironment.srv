@@ -1,0 +1,9 @@
+string name
+string city
+string street
+string building
+string level
+string room
+---
+string  msg
+

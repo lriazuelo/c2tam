@@ -1,0 +1,7 @@
+uint8 id
+c2tam_msgs/KeyFrame First
+c2tam_msgs/KeyFrame Current
+float64[]  mse3CamFromWorld
+---
+float64[]  mse3CamFromWorld
+float64 mdWiggleScaleDepthNormalized

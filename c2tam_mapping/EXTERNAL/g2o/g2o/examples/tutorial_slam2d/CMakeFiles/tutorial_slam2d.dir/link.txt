@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/tutorial_slam2d.dir/tutorial_slam2d.o  -o tutorial_slam2d -rdynamic -L/home/luis/workspace/ros_stacks/ctam_stacks/ctam_4year/re_ctam/ctam_mapping/EXTERNAL/g2o/g2o/examples/tutorial_slam2d libtutorial_slam2d.a -lcore -lsolver_csparse 

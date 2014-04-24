@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/circle_fit.dir/circle_fit.o  -o circle_fit -rdynamic -lcore -lsolver_csparse 

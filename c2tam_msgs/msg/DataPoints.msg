@@ -1,0 +1,12 @@
+uint8 id
+uint16 queueSize
+#uint16 indexKeyFrame
+c2tam_msgs/Point[] modPoints
+c2tam_msgs/PoseKeyFrame[] modKeyframes
+int16[] badPoints
+c2tam_msgs/PoseKeyFrame[] newKeyframes
+c2tam_msgs/Point[] newPoints
+c2tam_msgs/LoadPoint[] loadPoints
+sensor_msgs/Image[] imgkf
+uint8 initialLoad
+float64 denseScale
