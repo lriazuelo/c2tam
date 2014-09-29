@@ -41,7 +41,7 @@ Visualizer::Visualizer()
 
   map_info_sub = nh_.subscribe("/c2tam_mapping/map_info", 10, &Visualizer::mapCb, this);
   dense_info_sub = nh_.subscribe("/c2tam_mapping/dense_info", 1, &Visualizer::denseCb, this);
-  pose_sub = nh_.subscribe("/vslam/vslam_pose", 1, &Visualizer::poseCb, this);
+  pose_sub = nh_.subscribe("/c2tam/camera_pose", 1, &Visualizer::poseCb, this);
   obj_trans_sub = nh_.subscribe("/vslam/obj_visualizer", 1, &Visualizer::objTransCb, this);
 
   load_drawing_model_ = nh_.advertiseService("/ctam_visualizer/load_drawing_model", &Visualizer::LoadDrawingModel, this);
