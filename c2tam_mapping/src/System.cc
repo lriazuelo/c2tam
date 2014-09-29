@@ -671,7 +671,7 @@ bool System::LoadMapCb(c2tam_srvs::LoadMap::Request  &req, c2tam_srvs::LoadMap::
       }
   }
 
-  command_decompress = "cd " + path_maps + "/maps; tar -xzf " + req.name + ".tar.gz ";
+  command_decompress = "cd " + path_maps + "/maps; tar -xzf " + req.name + "_map.tar.gz ";
   FILE * find_1_file = popen(command_decompress.c_str(), "r");
   char command_1_find[1000];
   int numChar_1 = fread(command_1_find, 1, 1000, find_1_file);
@@ -1242,14 +1242,14 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
   path_save_maps = command_find;
   path_save_maps = path_save_maps + "/maps";
 
-  command_map = "find " + path_save_maps + " -name " + "vslam_map.tar.gz";
+  command_map = "find " + path_save_maps + " -name " + req.name + "_map.tar.gz";
 
   FILE * find_2_file = popen(command_map.c_str(), "r");
   char command_2_find[1000];
   int numChar_2 = fread(command_2_find, 1, 1000, find_2_file);
 
   if (numChar_2 != 0 ){
-    command_delete = "rm " + path_save_maps + "/vslam_map.tar.gz";
+    command_delete = "rm " + path_save_maps + "/" + req.name + "_map.tar.gz";
 
     FILE * find_8_file = popen(command_delete.c_str(), "r");
     char command_8_find[1000];
@@ -1259,14 +1259,16 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
     }
   }
 
-    command_directory = "find " + path_save_maps + " -name " + "map" + "." + req.name + "_ctam_map";
+//    command_directory = "find " + path_save_maps + " -name " + "map" + "." + req.name + "_ctam_map";
+    command_directory = "find " + path_save_maps + " -name " + req.name + "_ctam_map";
 
     FILE * find_3_file = popen(command_directory.c_str(), "r");
     char command_3_find[1000];
     int numChar_3 = fread(command_3_find, 1, 1000, find_3_file);
 
     if (numChar_3 == 0 ){
-      path_maps = path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+//      path_maps = path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+      path_maps = path_save_maps + "/" + req.name + "_ctam_map";
       mkdir(path_maps.c_str(),0777); 
       path_maps_kf = path_maps + "/kf";
       mkdir(path_maps_kf.c_str(),0777); 
@@ -1274,14 +1276,16 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
     }
     else{
       ROS_INFO("The directory exists");
-      command_delete = "rm -r " + path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+     // command_delete = "rm -r " + path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+      command_delete = "rm -r " + path_save_maps + "/" + req.name + "_ctam_map";
 
       FILE * find_4_file = popen(command_delete.c_str(), "r");
       char command_4_find[1000];
       int numChar_4 = fread(command_4_find, 1, 1000, find_4_file);
       if (numChar_4 == 0 ){
         ROS_INFO("Directory removed ... we create another directory");
-        path_maps = path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+ //       path_maps = path_save_maps + "/" + "map" + "." + req.name + "_ctam_map";
+        path_maps = path_save_maps + "/" + req.name + "_ctam_map";
         mkdir(path_maps.c_str(),0777); 
         path_maps_kf = path_maps + "/kf";
         mkdir(path_maps_kf.c_str(),0777); 
@@ -1630,14 +1634,16 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
   myDensePoints.close();
   myKeyFrames.close();
 
-  command_compress = " cd " + path_save_maps + "; tar -czf " + path_save_maps + "/" + "vslam_map.tar.gz " + "map" + "." + req.name + "_ctam_map ";
+ // command_compress = " cd " + path_save_maps + "; tar -czf " + path_save_maps + "/" + "vslam_map.tar.gz " + "map" + "." + req.name + "_ctam_map ";
+  command_compress = " cd " + path_save_maps + "; tar -czf " + path_save_maps + "/" + req.name + "_map.tar.gz " + req.name + "_ctam_map ";
   
   FILE * find_5_file = popen(command_compress.c_str(), "r");
   char command_5_compress[1000];
   int numChar_5 = fread(command_5_compress, 1, 1000, find_5_file);
   if (numChar_5 == 0 ){
     ROS_INFO("Tar.gz and move directory");
-    command_remove = "rm -r " + path_save_maps + "/" + "map" + "." + req.name + "_ctam_map ";
+//    command_remove = "rm -r " + path_save_maps + "/" + "map" + "." + req.name + "_ctam_map ";
+    command_remove = "rm -r " + path_save_maps + "/" + req.name + "_ctam_map ";
     FILE * find_6_file = popen(command_remove.c_str(), "r");
     char command_6_move[1000];
     int numChar_6 = fread(command_6_move, 1, 1000, find_6_file);
@@ -1648,7 +1654,7 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
 
   std::string name_map;  
   std::string name_id;
-  name_map = path_save_maps + "/vslam_map.tar.gz";
+  name_map = path_save_maps + "/" + req.name + "_map.tar.gz";
 
 
   ifstream fl(name_map.c_str());  
@@ -1670,7 +1676,7 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
 
 
 // DELETE LOCAL MAP FILE TAR.GZ
-
+/*
   command_delete = "rm " + path_save_maps + "/vslam_map.tar.gz";
 
   FILE * find_7_file = popen(command_delete.c_str(), "r");
@@ -1679,7 +1685,7 @@ bool System::SaveMapCb(c2tam_srvs::SaveMap::Request  &req, c2tam_srvs::SaveMap::
   if (numChar_7 == 0 ){
     ROS_INFO("File removed");
   }
-
+*/
   
 
   return true;
