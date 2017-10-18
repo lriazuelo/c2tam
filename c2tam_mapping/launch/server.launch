@@ -1,9 +1,0 @@
-<launch>
-	<node pkg="c2tam_mapping" type="C2TAMmapping" name="C2TAMmapping"  args="" cwd="node" respawn="false" output="screen">
-  		<param name="numKeyFrames" type="int" value="-1" />
-		<param name="robot_id" type="string" value="ari" />
-    		<param name="visualizer" value="false" />
-		<rosparam file="$(find c2tam_tracking)/launch/camera_parameters.yaml" command="load"/> 
-	</node>
-</launch>
-

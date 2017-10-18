@@ -1,8 +1,0 @@
-uint8 num
-float64 cx
-float64 cy
-float64 fx
-float64 fy
----
-uint8 id
-

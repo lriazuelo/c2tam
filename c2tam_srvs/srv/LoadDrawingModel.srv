@@ -1,7 +1,0 @@
-c2tam_msgs/File file  # file model
-float64 depth
-float64 width
-float64 height
----
-bool success       # success of request
-

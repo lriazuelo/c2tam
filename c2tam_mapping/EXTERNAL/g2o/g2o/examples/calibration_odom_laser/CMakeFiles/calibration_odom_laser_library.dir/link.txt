@@ -1,2 +1,0 @@
-/usr/bin/ar cr libcalibration_odom_laser.a  CMakeFiles/calibration_odom_laser_library.dir/gm2dl_io.o CMakeFiles/calibration_odom_laser_library.dir/sclam_helpers.o
-/usr/bin/ranlib libcalibration_odom_laser.a

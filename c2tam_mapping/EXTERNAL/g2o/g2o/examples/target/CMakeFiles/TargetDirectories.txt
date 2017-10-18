@@ -1,2 +1,0 @@
-/home/luis/workspace/ros_stacks/ctam_stacks/ctam_4year/re_ctam/ctam_mapping/EXTERNAL/g2o/g2o/examples/target/CMakeFiles/constant_velocity_target.dir
-/home/luis/workspace/ros_stacks/ctam_stacks/ctam_4year/re_ctam/ctam_mapping/EXTERNAL/g2o/g2o/examples/target/CMakeFiles/static_target.dir

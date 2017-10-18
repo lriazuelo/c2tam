@@ -1,4 +1,0 @@
-string[] listObjects
-float32[] depths
----
-bool done

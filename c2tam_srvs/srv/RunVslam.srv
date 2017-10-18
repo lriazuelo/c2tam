@@ -1,4 +1,0 @@
-bool run          # Action: TRUE-start FALSE-stop
-int8 mode	  # Mode: default 0
----
-bool success      # success of request

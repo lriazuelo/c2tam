@@ -1,7 +1,0 @@
-string[] listObjects
-float32[] depths
-float32[] widths
-float32[] heights
-string[] types
----
-bool done

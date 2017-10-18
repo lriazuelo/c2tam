@@ -1,8 +1,0 @@
-string name
-uint8 mode
----
-string  path
-uint8 id
-float32 mdWiggleScaleDepthNormalized
-uint16 queueSize
-

@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/sba_demo.dir/sba_demo.o  -o sba_demo -rdynamic -lsolver_csparse -lcore -ltypes_icp -ltypes_sba 

@@ -1,4 +1,0 @@
-sensor_msgs/Image img
----
-int8 id
-

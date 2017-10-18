@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/static_target.dir/static_target.o  -o static_target -rdynamic -lcore -lsolver_cholmod 

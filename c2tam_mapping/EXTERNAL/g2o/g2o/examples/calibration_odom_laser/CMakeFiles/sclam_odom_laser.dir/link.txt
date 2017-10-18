@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/sclam_odom_laser.dir/sclam_odom_laser.o  -o sclam_odom_laser -rdynamic -L/home/luis/workspace/ros_stacks/ctam_stacks/ctam_4year/re_ctam/ctam_mapping/EXTERNAL/g2o/g2o/examples/calibration_odom_laser libcalibration_odom_laser.a -lcore -lsolver_csparse -ltypes_sclam2d -ltypes_data 
