@@ -1,0 +1,38 @@
+have_x86 yes
+have_mmx yes
+have_mmxext
+have_sse yes
+have_sse2 yes
+have_sse3 yes
+have_32bit yes
+have_inline_asm yes
+have_assembler yes
+have_dc1394v2 yes
+have_dvbuffer
+have_dvbuffer3 yes
+have_v4l2buffer
+have_v4l1buffer
+have_linux_2_4
+have_linux_2_6
+have_o2buffer
+have_qtbuffer
+have_videodisplay yes
+have_tr1_shared_ptr yes
+have_toon yes
+have_lapack yes
+have_pthread yes
+have_png yes
+have_jpeg yes
+have_tiff yes
+have_ffmpeg
+have_glob yes
+have_memalign yes
+have_fast7 yes
+have_fast8 yes
+have_fast9 yes
+have_fast10 yes
+have_fast11 yes
+have_fast12 yes
+have_ssefast9 yes
+have_ssefast10 yes
+have_ssefast12 yes

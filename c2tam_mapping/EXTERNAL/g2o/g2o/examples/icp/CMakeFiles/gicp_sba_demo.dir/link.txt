@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/gicp_sba_demo.dir/gicp_sba_demo.o  -o gicp_sba_demo -rdynamic -lcore -ltypes_sba -ltypes_slam3d -ltypes_icp -lsolver_csparse 

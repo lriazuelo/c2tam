@@ -1,0 +1,5 @@
+# Calibration parameters kinect
+camera_cx: 311.592488
+camera_cy: 250.148823
+camera_fx: 525.776310
+camera_fy: 526.555874

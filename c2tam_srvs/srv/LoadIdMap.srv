@@ -1,0 +1,4 @@
+uint8 id
+uint8 mode
+---
+float32 mdWiggleScaleDepthNormalized

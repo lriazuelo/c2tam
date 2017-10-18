@@ -1,0 +1,10 @@
+<launch>
+	<node pkg="image_view" type="image_view" name="real_visualizer" respawn="false" output="screen">
+		<remap from="/image" to="/vslam/real_visualizer" />
+	</node>
+
+	<node pkg="c2tam_visualizer" type="C2TAMvisualizer" name="C2TAMvisualizer"  args="" cwd="node" output="screen">
+          <param name="visualizer" type="int" value="0" /> <!-- 0 tracking 1 mapping -->
+          <rosparam file="$(find c2tam_tracking)/launch/camera_parameters.yaml" command="load"/> 
+  	</node>
+</launch>

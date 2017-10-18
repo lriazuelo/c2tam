@@ -1,0 +1,25 @@
+<launch>
+  <node name="C2TAMtracking" 
+   	pkg="c2tam_tracking" 
+	type="C2TAMtracking" 
+	respawn="false" cwd="node" output="screen" > 
+    <param name="mode" type="int" value="0" />
+    <param name="stat" type="int" value="1" />
+    <param name="freqVisual" type="int" value="1" />
+    <param name="freqObj" type="int" value="150" />
+    <!--<param name="needKFCoefficient" type="double" value="3.0" />
+    <param name="needAngKFCoefficient" type="double" value="0.2" /> -->
+    <!--<param name="needKFCoefficient" type="double" value="0.6" />
+    <param name="needAngKFCoefficient" type="double" value="0.1" />-->
+    <param name="needKFCoefficient" type="double" value="1.5" />
+    <param name="needAngKFCoefficient" type="double" value="0.15" />
+    <param name="sendRgb" value="true" />
+    <param name="visualizer" value="true" />
+    <remap from="image_color" to="/camera/rgb/image_rect_color"/> 
+    <remap from="image_depth" to="/camera/depth_registered/image_raw"/>
+<!--    <remap from="image_color" to="/camera/rgb/image_color"/> 
+    <remap from="image_depth" to="/camera/depth/image"/>  -->
+    <rosparam file="$(find c2tam_tracking)/launch/camera_parameters.yaml" command="load"/> 
+  </node>
+</launch>
+

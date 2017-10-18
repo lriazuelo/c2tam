@@ -1,0 +1,4 @@
+string mapUID  # unique identifier of the map
+
+---
+bool success      # whether object was found and deleted
